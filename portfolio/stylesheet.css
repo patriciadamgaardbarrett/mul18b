@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-box: none;
+}
+
+body {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	
+	background-image: url("images/homepage-background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 16%;
+}
+
+button{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 15px;
+	border: 1px solid gray;
+	padding: 25px;
+}
+
+/* ________________________________ Back to top btn. ___________________________________*/
+.btt-div {
+	margin-bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-right: 20px;
+}
+
+#btt-btn {
+	width: 35px;
+	height: 35px;
+	border: 1px solid gray;
+	display: flex;
+	float: right;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+
+/* ________________________________ Header container ___________________________________*/
+header {
+	width: 100%;
+	height: 60px;
+	align-items: baseline;
+	padding-top: 20px;
+}
+
+#logo {
+	float: left;
+	align-items: baseline;
+}
+
+.material-icons, .material-icons {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+
+/* ________________________________ Home container _____________________________________*/
+.home {
+	width: 100%;
+	height: 550px;
+	margin-bottom: 60px;
+}
+
+
+/* ________________________________ About container ____________________________________*/
+.about {
+	height: 600px;
+	display: grid;
+	grid-gap: 1px;
+	grid-template-columns: 100px 500px 290px 290px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-areas:
+    'arrow img intro intro'
+    'arrow img intro intro'
+    'arrow img download-btn contact-btn';
+	
+	text-align: left;
+	border: 1px solid gray;
+	margin-bottom: 60px;
+}
+
+.grid-item {
+	background: white;
+	border: 1px solid gray;
+}
+
+.arrow1 {grid-area: arrow;}
+.img {grid-area: img;}
+.intro {grid-area: intro;}
+.download-btn {grid-area: download-btn;}
+.contact-btn {grid-area: contact-btn;}
+
+.download-btn, .contact-btn {
+	text-align: center;
+	width: 200px;
+	height: 50px;
+	background: #D0DBCC;
+	padding-top: 20px;
+	
+}
+
+#about {
+	width: 500px;
+}
+
+
+/* _________________________________ Service container _________________________________*/
+.services {
+	height: 600px;
+	display: grid;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-columns: 100px 260px 260px 260px 260px;
+	grid-template-areas: 
+	'arrow icon1 icon2 icon3 icon4'
+	'arrow brand-idt graphic-dsg web-dvp front-end';
+	
+	text-align: center;
+	border: 1px solid gray;
+	margin-bottom: 60px;
+}
+
+.arrow3 {grid-area: arrow;}
+.icon1 {grid-area: icon1;}
+.icon2 {grid-area: icon2;}
+.icon3 {grid-area: icon3;}
+.icon4 {grid-area: icon4;}
+.brand-idt {grid-area: brand-idt;}
+.graphic-dsg {grid-area: graphic-dsg;}
+.web-dvp {grid-area: web-dvp;}
+.front-end {grid-area: front-end;}
+
+.circle {
+	border: 1px solid gray;
+	background: white;
+	border-radius: 100px;
+	height: 100px;
+	width: 100px;
+}
+
+/* _______________________________ Workflow container __________________________________*/
+.workflow {
+	height: 600px;
+	display: grid;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-columns: 1100px 100px;
+	grid-template-areas: 
+	'wf-model arrow';
+	
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.wf-model {grid-area: wf-model;}
+.arrow4 {grid-area: arrow;}
+
+#workflow-txt {
+	width: 800px;
+	margin: 50px 150px;
+}
+
+
+/* _______________________________ Statistics container ________________________________*/
+.statistics {
+	height: 550px;
+	display: grid;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-columns: 100px 260px 260px 260px 260px;
+	grid-template-areas: 
+	'arrow stat1 stat2 stat3 stat4'
+	'arrow coffee projects clients awards';
+	
+	border: 1px solid gray;
+	margin-bottom: 60px;
+}
+
+.arrow5 {grid-area: arrow;}
+.stat1 {grid-area: stat1;}
+.stat2 {grid-area: stat2;}
+.stat3 {grid-area: stat3;}
+.stat4 {grid-area: stat4;}
+.coffee {grid-area: coffee;}
+.projects {grid-area: projects;}
+.clients {grid-area: clients;}
+.awards {grid-area: awards;}
+
+
+/* _____________________________ Testimonials container _______________________________*/
+.testimonials {
+	height: 550px;
+	display: grid;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-columns: 60px 600px 60px 100px;
+	grid-template-areas: 
+	'prev testcomment next arrow';
+	
+	border: 1px solid gray;
+	margin-bottom: 60px;
+}
+
+.prev {grid-area: prev;}
+.testcomment {grid-area: testcomment;}
+.next {grid-area: next;}
+.arrow6 {grid-area: arrow;}
+
+
+/* ________________________________ Contact container _________________________________*/
+.contact {
+	height: 550px;
+	display: grid;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+	grid-template-columns: 100px 400px 400px;
+	grid-template-areas: 
+	'arrow contact-txt contact-txt'
+	'arrow form-name form-email'
+	'arrow form-phone form-subject'
+	'arrow form-message form-message'
+	'arrow form-submit form-submit';
+	
+	border: 1px solid gray;
+	margin-bottom: 60px;
+}
+
+.arrow7 {grid-area: arrow;}
+.contact-txt {grid-area: contact-txt;}
+.form-name {grid-area: form-name;}
+.form-email {grid-area: form-email;}
+.form-phone {grid-area: form-phone;}
+.form-subject {grid-area: form-subject;}
+.form-message {grid-area: form-message;}
+.form-submit {grid-area: form-submit;}

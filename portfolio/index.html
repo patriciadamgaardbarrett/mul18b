@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	
+
+<!-- ______________________________________________ Home page _______________________________________________ -->
+<header id="home">
+	<h1 id="logo">Patricia Barrett</h1>
+	<i class="material-icons" style="font-size: 25px;">menu</i>
+	<i class="material-icons" style="font-size: 25px;">search</i>
+</header>
+
+<div class="container home">
+</div>
+	
+
+<!-- ____________________________________________ Back to top btn ___________________________________________ -->
+<div class="btt-div">
+	<button id="btt-btn">
+		<a href="#home"><i class="material-icons" style="font-size: 25px;">expand_less</i></a>
+	</button>
+</div>
+	
+<!-- ____________________________________________ About container ___________________________________________ -->
+<div class="container about">
+	<div class="grid-item arrow1">
+		<figure class="arrow">
+			<img src="arrows/about-arrow.png" alt="About arrow" height="450px"/>
+		</figure>
+	</div>
+    <div class="grid-item img">
+		<img src="images/selfportrait.jpg" alt="Selfportrait" Style="width:375px;"/>
+	</div>
+    <div class="grid-item intro">
+		<p id="about"><strong>Hello, I’m Patricia Barrett, 
+	        a freelance graphic designer and front-end designer based in Copenhagen - I create digital products with both passion and experience</strong> <br>
+	        <br>
+	        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia felis sem, quis pharetra arcu placerat nec. Pellentesque dolor justo, hendrerit vel laoreet non, vestibulum rutrum mi. Ut rutrum enim et consectetur interdum. Sed odio augue, aliquet ut auctor vel, mattis quis est. Quisque finibus magna dapibus dolor sollicitudin ornare. Nulla a elit semper, rhoncus elit non, sodales purus. Nam eget nunc ac justo ornare fringilla non aliquet massa. Mauris sollicitudin nulla at mollis tristique. Vivamus eu finibus nisi, at commodo eros. Sed malesuada tincidunt enim sit amet varius. Curabitur volutpat ligula ac lacinia iaculis. Cras mollis eleifend purus eget efficitur. <br>
+	        </p>
+	</div>
+    <div class="grid-item">
+		<button class="download-btn">Download CV</button>
+	</div>
+	<div class="grid-item">
+		<button class="contact-btn">Contact</button>
+	</div> 
+</div>
+
+	
+<!-- __________________________________________ Portfolio container _________________________________________ -->
+<div class="container portfolio"></div>
+
+	
+<!-- ___________________________________________ Services container _________________________________________ -->
+<div class="container services">
+	<div class="grid-item arrow3">
+		<figure class="arrow">
+			<img src="arrows/services-arrow.png" alt="Services arrow" height="450px"/>
+		</figure>
+	</div>
+    <div class="grid-item icon1 circle">
+		    <img src="data:image/png;base64,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" alt="Brand identity icon">
+	</div>
+    <div class="grid-item icon2 circle">
+		    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATjSURBVHhe7Zw9aBRBFMeDFkIEQUEbITaCVn40gpAynTaChxZpkrskd5hUYhPQqxQrC1PaSbDUVmMTUBs/ohADAREbsTHpAkFR9P+WN8s4N7s3szuzc3vOD4bdefNm3pu/+25uE+JIJBKJRCKRSCQSGRCmpqYOU+NuxAYSbnZ29iO1QRVxbm7uKPJbmpmZ+YLrD1y/oj1oNpvH2SUMknh/uA2MiJRHu90+gpzGIdaWlKPcdlqt1iWeUi2KeMkTKO5Diyhyg3CbuO5wXqt4Es/hOorraYw9ITuuP9G/zFOrQRWP+jobu1eKkodoDxuNxl52SYH9MY8/1417IU+o0CKq8cU9nrJ1XS4o8bM8vskmv5gIZOLjA11c2aYTcXJycj+PbbHJH7oEeagHG18X5MWTx1QRYTsv5rDJD3kJCmB/hQRfcrcyEU3iyD5CRPrMQ3+VbXfZ1T0mCRJI4gU17iaYzi2KvD5ib+Str/iu47rM999c55UiB6VrkUAu1tChrJsIgUPhBA9rUeeg0VeccR52i8nGYf+nbAWq3WQtG9T1xL2tiPDfLJuLFtMNI4GesiV0dtM1+6FbR7Yhbq6IrvLIxVeQsuvmzZfHskQsG98KV8Ew10k5Z83Dfbq+7KOKWDRuKVwExUZKl3Oev7q+7CtEtI3nFF/BTdctEl+eQyKibdjMd47tJuDj5HTOGse9dn0ZZW448QRZm9GBzRU6nTE2z+bceFnry9jkWxm+kqJ1IEiHu6Xj+MrTCa6Sw1xtGWatn+Wv4io/r7hIUleGeevq/FVc5FUZrpMtu57rfCrBNmn4/L9lm4VN8royzJuv81exiT+wFN0E3hLo146FNz8U4glsN5MlHu6Hv2yzMN1U3pP335RtFv02F8vWAHmTeJrS17NYthbQ5iBK+noWy7YEPssW/fZQi+mzbNG/prMPDb7Ltt94rfFZtjJDKaLPsiVgu4F1rnN3uET0XbYE1thC+87dhKEQsaqyxdhJxAr7e1/XVF22AnX9WooYqmwJ3fq1EjF02WZRCxF9l60tWKM+p7PPskW/0OsZYtbjdPZZtugXfj3DnME/nX2Xre1m4VOf09ln2crYbBYx63E6d7vdPQj6noNTu4c2ysN9sU3e1B9j9Tid8a85wUHTBtsa/bEKu2RSNGlXm8Xc8KczEnjEAe/g/gKun7i/yC5ayibrYrPIN+zp3Ol0DiLILpL4jesY2Vqt1kUKDtubxEmDqyTLroM5PWXuKjcjEEB8tXjKppGFhYUDbPuF9hptUS5n1wnargcf7elMuM6tL0hkjYNdYVMC29IGv3e4jvpK0GZd5KI9nX3llglK9QwH28ZTt4/NKfQkIlH5M5FOZ28JmgqAsbBlK0CgJQoIke6zSYv4TJSatwSLCBFEPHriEGybgtKfybO5B4yPQeDbnFwlCdoIEkQ8AqJc5aDUumxOYHEb8FlBo9M58cP9h6oSNBEmmHgExHjGgUXrNpvNU7hSWSdPJrddtGX4T9AbC0+vhDyBgoo3PT19TH6yMtpb+MxD1EM8LQg6oYKKR0CYWxxcbfTkLeV9JoZAFUy+r1w8KkMISP/LTyIaPYloK7hv6L7KDAqKiGHEIyBW8oMDXD+j3cR98vpWByQRw4hHIDidrpUfCK4g4YKJF4lEIpFIJBKJRFRGRv4CffSTMLQEP00AAAAASUVORK5CYII=" alt="Graphic design icon">
+	</div>
+    <div class="grid-item icon3 circle">
+		    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVHhe7ZdrbhsxDIR9jzY/+sjJ/IKPFsT508cJ2l6mL7TpAZLhgiq8sghBodiuo/kAIuGsPNJOHK69IoQQQgghhBBCCOnK4XC42u12R9Q96mGQut9ut3f7/f5aY3gam83mJcx+ZObDFEL8jhBfaBztwOBWjd65jC4MuVfc8wcN8kbldmDyR0zknajSMOh/n7x5fqvUjv4FHrQdDvf9WwanDxb5C6Fuob3Gzzeii6bXioNYPJdaesSJktZEycB6sCCsb1IF/WwQ52uWVHrEiZLWRMkAgcweLNnAtfTZIE5rtV0EpTO5z1kyQChnD5Y0cC0dr5kN4rRW20VQOpP7nIbp9IH6NCidiWcBJp0BnoAw7lR/L2FJSNA+prWGftSXT6S12i6C0pnc5ywZYLZdQyt9O/mKwEoPkZ/yhNaXT+RrllR6xImS1oRlIA8I6DcIRz7CTB9j8K57JUHJ76Lh+i/Ucb1ev9WX/SX5LrH0iBMlrQm3wYXDAJ0wQCfdAhy9NI52SmYjlsbRjtvgwmGAThigEwboJCxAaF/wbeOztuF9Tm//vE9AjwkQm32S0ja8z6mt9/aJsABHgQE6CQsQWnFm9KLm33t/y0/uXUrbdiwDmRdS2nan5t97f8svLMBRYIBOwgKENpsZ0X1O7Xorlh/0mACx2WxmRPc5teutWH5hAY4CA3TybAPEmS57Bv5vrJn1VCy/Zxvgv4IBOgkLENpsZkT3ObXrrVh+0GMCxGazmRHd59Sut2L5hQU4CgzQSViA0LrOoJyaf+/9LT+5dylt27EMZF5Iadudmn/v/S2/sABHgQE6CQsQ2mxmRPc5vf3zPgE9JkBsNpsZ0X1Obb23T4QFOAoM0AkDdMIAnXQLcPTSONopmY1YGgchhBBCCCGEEEKIl9XqEc9k4ZWbtlyIAAAAAElFTkSuQmCC" alt="Webdesign icon">
+	</div>
+	<div class="grid-item icon4 circle">
+		    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOCSURBVHhe7Zs/TFNRGMVL4iILmzFR2UyIIzMzDmrCzILDa1/bhXRk6sLMzChhMuKm7MR/UQaNCTsrCSZYI3EheE48Nc9See++7zWv7ft+yU1zT+937v0Ovtc/YM1xHMdxHMdxHMdxHKdQWq3WvUajsYfRw7isyOjV6/WXcRzfVwz5iKLoLsy+DZhXZiDEU4R4R3GEA4MXMnptMpow2Ct6fqUgn0sOByY/aNJut29Lqgy6+viP57ukcPQTuNS0cpj79wA9QBMeoBEP0IgHaKSwADHe4eX8rWTqlZjjsZgAYfaGQzLfH1ZiXliAmlYOD9CIB2jEAzTiARrxAI1MXYBRFD3EeZ5oOnKmKkCcYw7vzX7hsSdp5Jj7NxsUCM6xwrMgxANJI8fcv9mgQHCObZ4FAW5IGjnm/s0GBYJzHPMsCHBR0sgx9282GAL8ZjE+IYj3klLB+gWeAzUnmM78Uf+Ffhgf6S/JDPfk0DQcs8EQ0OSOfD9LSgU166zB466kK+C5L1qzI8mMzjk+AaK5NTX5M47jB5JTQc2+6lYlXYF+9NW6Nckm6MWhaThmgwTJBvF+7qnkVDqdzk3UnWNcNJvNW5KHQl/6c5+QH9D/MPdvNhDwmEVTR/J7JjkTqFtmHR4PJV0L/bWe+5nuh/Th0DQcs4GAR+6msH6LtRibkq6F/nl/WIPIo9wA0Uyu+16fRBhLklIp6n6ofcsL0NoI6uZ1hrNut3tDcia4n/bNfT/U3uUEiDrzpYQXhbrq9yQFwX1Zr3ME3w+19+QGiDr+XSJfteuSguC+rJ/IAInlEuYli7oznWFecma4n/adzEu4T95GULOkuiNJmbHee/uwnkPTcMwGAh7BlxLWbbIGY0tSJuivfVg7+W9jCDyCm8L6Q67H47KkTNBfdbnue0now6FpOGaDBMnLKu2jHD+yYe0Fxjk/yklOZWo/yvVBY5nuh3h+VXvvS0qlqPteEp1hfAIkaC716yys2eUaPK5LSgVrv6pmer/OIvDrf6H696+hBpjBcyfae0FaKlj7AXXT/4VqGghhUfseSyoNc/9mgxwgwA3tuy2pNMz9mw1ygAAPtO+KpNIw9282yAH24/9T4y/Q5ySVhrl/s0EO8F7uMQJ8pGmpTGSA44QHaMQDNOIBGvEAjXiARgoLsOpDcYQzzKyKQ3E4juM4juM4juM4juNYqdV+AxUwC13ehgICAAAAAElFTkSuQmCC" alt="Front-end icon">
+	</div>
+	<div class="grid-item brand-idt">
+		<h2><strong>Brand identity</strong></h2>
+		<br>
+		<p>Every brand needs a brand identity. I make brand identity packs for both new brands, and excisting brands who needs a re-design.</p>
+	</div>
+    <div class="grid-item graphic-dsg">
+		<h2><strong>Graphic design</strong></h2>
+		<br>
+		<p>Banner, poster, digital illustration, emballage design, photo editing,</p>
+	</div>
+    <div class="grid-item web-dvp">
+		<h2><strong>Webdesing</strong></h2>
+		<br>
+		<p>New webdesigns, re-design of existing websites, webdesign changes, features for webdesigns, etc.</p>
+	</div>
+	<div class="grid-item front-end">
+		<h2><strong>Front-end</strong></h2>
+		<br>
+		<p>Website coding with HTML and CSS, HTML5, etc.</p>
+	</div>
+</div>
+
+
+<!-- ___________________________________________ Workflow container _________________________________________ -->
+<div class="container workflow">
+	<div class="grid-item wf-model">
+		<p id="workflow-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum corporis ipsam assumenda totam deserunt voluptas neque laborum officia qui maxime.</p>
+		<br>
+		<figure>
+			<img src="images/workflow-model.png" alt="Workflow model" width="800px"/>
+		</figure>
+	</div>
+    <div class="grid-item arrow4">
+		<figure class="arrow">
+			<img src="arrows/workflow-arrow.png" alt="Workflow arrow" height="450px"/>
+		</figure>
+	</div>
+</div>
+
+
+<!-- __________________________________________ Statistics container ________________________________________ -->
+<div class="container statistics">
+	<div class="grid-item arrow5">
+		<figure class="arrow">
+			<img src="arrows/statistics-arrow.png" alt="Statistics arrow" height="450px"/>
+		</figure>
+	</div>
+    <div class="grid-item stat1">Stat 1</div>
+    <div class="grid-item stat2">Stat 2</div>
+    <div class="grid-item stat3">Stat 3</div>
+	<div class="grid-item stat4">Stat 4</div>
+	<div class="grid-item coffee">Cup of coffee</div>
+    <div class="grid-item projects">Projects completed</div>
+    <div class="grid-item clients">Happy clients</div>
+	<div class="grid-item awards">Awards</div>
+</div>
+
+
+<!-- _________________________________________ Testimonials container _______________________________________ -->
+<div class="container testimonials">
+	<div class="grid-item prev">
+		<i class="material-icons" style="font-size: 50px; color: gray;">chevron_left</i>
+	</div>
+	<div class="grid-item testcomment">
+		<q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat perferendis velit amet, culpa facere repudiandae, cupiditate totam saepe magni non nobis distinctio laudantium tempore, asperiores dignissimos placeat, tempora nulla blanditiis!</q>
+        <p class="author"><strong>- John Keats</strong></p>
+	</div>
+    <div class="grid-item next">
+		<i class="material-icons" style="font-size: 50px; color: gray;">chevron_right</i>
+	</div>
+	<div class="grid-item arrow6">
+		<figure class="arrow">
+			<img src="arrows/testimonials-arrow.png" alt="Testimonial arrow" height="450px"/>
+		</figure>
+	</div>
+</div>
+	
+	
+<!-- ___________________________________________ Contact container __________________________________________ -->
+<div class="container contact">
+	<div class="grid-item arrow7">
+		<figure class="arrow">
+			<img src="arrows/contact-arrow.png" alt="Contact arrow" height="450px"/>
+		</figure>
+	</div>
+	<div class="grid-item contact-txt">
+		<h2>Let's create</h2>
+		<br>
+	    <p>Thank you for stopping by my site!<br> If you want to meet for a cup of coffee please use the contact formular below.</p>
+		<br>
+	</div>
+    
+	<form action="mailto:pey.barrett@hotmail.com" method="post" enctype="text/plain">
+	<div class="grid-item form-name">
+		<input id="name" type="text" name="fullname" placeholder="Name *" required>
+	</div>
+	<div class="grid-item form-email">
+		<input id="e-mail" type="text" name="email" placeholder="E-mail *" required>
+	</div>
+	<div class="grid-item form-phone">
+		<input id="phone" type="text" name="phone" placeholder="Phone" autofocus required>
+	</div>
+	<div class="grid-item form-subject">
+		<input id="subject" type="text" name="subject" placeholder="Subject *" required>
+	</div>
+	<div class="grid-item form-message">
+		<textarea name="subject" placeholder="Message *" style="height:200px" required></textarea>
+	</div>
+	<div class="grid-item form-submit">
+		<input id="massage-button" type="submit" value="Send Message">
+	</div>
+	</form>
+</div>
+
+<footer></footer>
+</body>
+</html>
