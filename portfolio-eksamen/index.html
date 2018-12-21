@@ -3,8 +3,1365 @@
 <head>
 <meta charset="UTF-8">
 <title>Portfolio • Patricia Barrett</title>
-</head>
+	<link rel="stylesheet" href="stylesheet.css" />
+	<link rel="shortcut icon" type="image/png" href="icons/shortcut-logo.png" sizes="57x57">
+</head>	
 
 <body>
+	
+	<header id="hjem">
+		<div class="topnav">
+		    <div class="left">
+			    <a href="#hjem">
+				    <img src="icons/logo-sort.png" alt="Logo" id="logo" />
+				</a>
+			</div>
+		
+		    <!-- Navigation -->
+		    <nav id="myLinks">
+			    <ul>
+                    <li><a href="#introduktion">Introduktion</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+				    <li><a href="#baggrund">Baggrund</a></li>
+                    <li><a href="#referencer">Referencer</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+			</nav>
+			
+			<div class="menu-toggle">
+				<div class="hamburger" onClick="myFunctionMenu()"></div>
+		    </div>
+		</div>
+	</header>
+	
+	<section class="background-grey" id="headerSection">
+	    <div class="container">
+		    <div class="grid-container header">
+				<div class="row forside-slider">
+					<div class="col-12-sm col-12 myForsideImg fade">
+					    <img src="icons/forside-img1.png" alt="forside billede" class="forside-img" />
+					</div>
+					
+					<div class="col-12-sm col-12 myForsideImg fade">
+					    <img src="icons/forside-img2.png" alt="forside billede" class="forside-img" />
+					</div>
+					
+					<div class="col-12-sm col-12 myForsideImg fade">
+					    <img src="icons/forside-img3.png" alt="forside billede" class="forside-img" />
+					</div>		
+				</div>
+				    <div id="rulNed">
+						<div class="down center">
+						    <a href="#introduktion"><div class="down-arrow"></div></a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	
+	<script type="text/javascript">
+		var slideIndex = 0;
+		showSlides();
+		
+		function showSlides() {
+			var i;
+            var slides = document.getElementsByClassName("myForsideImg");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1} 
+            slides[slideIndex-1].style.display = "block"; 
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+		}
+	</script>
+
+	
+	<!-- Introduktion section - start -->
+	<section class="background-white">
+		<div class="container">
+			<div class="grid-container">
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<h2 class="center color-black uppercase" id="introduktion">Lad mig bryde isen</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+						<p class="justify color-grey">Du vil højst sandsynligt “bare” gerne skimme mine tidligere cases igennem. Det er også okay, og der kommer vi til, men lad mig først bryde isen! Jeg er multimediedesign studerende og grafisk designer. Du kan i bund og grund kalde det hvad du vil. Min pointe er blot, at jeg er utrolig kreativ og elsker mit fag. Jeg er dedikeret og superdygtig til at oversætte både enkle og komplekse idéer til lækre brugervenlige løsninger. Jeg er skarp i Adobes grafiske programmer, som jeg primært bruger til at kreere kreative løsninger - alt sammen med fokus på, at levere høj kvalitet og hurtig levering.
+                        </p>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Introduktion section - slut -->
+	
+	<!-- Portfolio section - start -->
+    <section class="background-grey">
+		<div class="container">
+			<div class="grid-container">
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<h2 class="uppercase color-black center">Portfolio</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+						<p class="justify color-grey">Gennem uddannelsesprojekter, fast stilling og freelanceopgaver har jeg været omkring flere forskellige opgaver og spændende udfordringer. Så her er et udvalg af nogle af mine bedste løsninger.</p>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				<div class="row">
+				    <div class="col-12-sm col-12 center" id="myBtnContainer">
+
+							<button class="btn active" onclick="filterSelection('all')"> Vis alle</button>
+							<button class="btn" onclick="filterSelection('skoleprojekter')"> Skoleprojekter</button>
+							<button class="btn" onclick="filterSelection('webdesign')"> Webdesign</button>
+							<button class="btn" onclick="filterSelection('trykogprint')"> Tryk og Print</button>
+							<button class="btn" onclick="filterSelection('branding')"> Branding</button>
+
+						</div><!-- myBtnContainer end -->
+				</div>
+				
+				<!-- Billede galleri start-->
+				<div class="row">
+					<div class="column col-4-sm col-4 skoleprojekter webdesign">
+						<div class="content">
+							<a href="#openModal1">
+								<img src="images/portfolio-prototype-mockup.jpg" alt="webdesign" class="portfolio-img">
+							</a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 skoleprojekter webdesign">
+						<div class="content">
+							<a href="#openModal2">
+								<img src="images/vejrapp-mockup1.jpg" alt="webdesign" class="portfolio-img">
+							</a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 skoleprojekter webdesign">
+						<div class="content">
+							<a href="#openModal3">
+								<img src="images/sweetbot-mockup.jpg" alt="webdesign" class="portfolio-img">
+							</a>
+						</div>
+					</div>
+				</div>	
+				
+				<div class="row">
+					<div class="column col-4-sm col-4 webdesign">
+						<div class="content">
+						    <a href="#openModal4">
+						        <img src="images/lifted-mockup.jpg" alt="webdesign" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 webdesign">
+						<div class="content">
+						    <a href="#openModal5">
+						        <img src="images/topdanmark-mockup.jpg" alt="webdesign" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 trykogprint">
+						<div class="content">
+						    <a href="#openModal6">
+						        <img src="images/poster-mockup.jpg" alt="trykogprint" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="column col-4-sm col-4 trykogprint">
+						<div class="content">
+						    <a href="#openModal7">
+						        <img src="images/kønsneutralitet-kampagne-mockup.jpg" alt="trykogprint" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 trykogprint">
+						<div class="content">
+						    <a href="#openModal8">
+						        <img src="images/geometric_mag_mockup.jpg" alt="trykogprint" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+					<div class="column col-4-sm col-4 branding">
+						<div class="content">
+						    <a href="#openModal9">
+						        <img src="images/pb-visualidentity-mockup.jpg" alt="branding" class="portfolio-img" />
+						    </a>
+						</div>
+					</div>
+				</div>
+				<!-- Billede galleri slut-->
+			</div>
+		</div>
+		
+		<!-- Modal - eksamens portfolio - start -->
+		<div id="openModal1" class="modalDialog">
+			<div class="modal-content">
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+				<!-- Eksamen, flow 1 og flow 2 -->
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Portfolio</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Skoleprojekt</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Du har på nuværende tidspunkt allerede skimmet halvdelen af det, som udgør min portfolio. Det er sikkert også dette punkt, som du finder mest interessant - nemlig mit tidligere arbejde. I en fælles betegnelse betyder ordet “portfolio” en samling af en kunstner eller elevs arbejde, som ses gennem dokumentation af personens erhvervede kompetencer samt faglige- og personlige udvikling. I min portfolio kan du derfor både se udvalgte eksempler på mit tidligere arbejde - hertil udviklingen, refleksioner og tilhørende læring -, men jeg viser også, hvem jeg er som person og kreativ designer og vigtigst af alt - hvorfor I lige netop skal vælge mig til jeres projekt! I den forbindelse ønsker jeg at trække jer dybere ned i min proces omkring mit portfolio, som i øvrigt er mit 1. semester eksamens projekt, samt hvilke tanker der ligger bag. Det skal dog pointeres, at denne del af mit arbejde er en sammentrækning af semesterets første to opgaver (Flow 1 - portfolio prototype og Flow 2 - kodning af prototypen) samt eksamensopgaven.</p>
+							    </div>
+				                <div class="col-2-sm col-2"></div>
+						    </div>
+			                <div class="row">
+			                    <div class="col-4-sm col-4"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://cphbusiness.mrooms.net/pluginfile.php/150379/mod_resource/content/3/eksamensprojekt%201sem%202018.pdf" target="_blank">Eksamensbeskrivelse</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4"></div>
+			                </div>
+					    </div>
+				    </section>
+	
+	                <section class="container background-white">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black"> Nyeste version, dens funktioner og ændringer</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-6-sm col-6">
+				                    <img src="images/portfolio-mockup1.jpg" alt="Mockup" title="Portfolio mockup" class="portfolio-img" />
+				                </div>
+				                <div class="col-6-sm col-6">
+					                <p class="justify color-grey">Jeg vil starte med at fortælle om den nyeste version af mit portfolio, som også er det site, som du har befundet dig på indtil nu - og stadig gør. Som resultat en brugertest af den gamle version samt ny viden og erfaren indenfor min egen evne til at realisere mine prototyper indtil velfungerende website koder, tog jeg beslutningen om, at ændre store dele af portfoliens design. Dette gælder både for indholdet og sidens design. Dog har beslutningen om en såkaldt “onepager” ikke ændret sig. 
+                                    <br>
+                                    Gennem den nye version vil du blive navigeret gennem en side - lidt ligesom en historiefortælling. Her vil du som det første blive mødt af et interessant forsidebillede, som siger noget om mine kompetencer, profession og ikke mindst det faktum, at jeg er åben over for udfordringer og ifølge ordsproget “tager det med stiv arm”. Dernæst er der i den nye version det, som jeg vil kalde en “appetizer”. En lille introduktion, som rummer af humor, og personliggøre mit indhold - for det er jo et personligt site om mig. 
+                                    <br>
+                                    Som en ændring fra den gamle version, vil mit arbejde blive vist som det næste. Det skyldes, at det netop er det, som du ønsker at se, og for ikke at tabe din interesse og trække spændingen ud, giver det en bedre effekt. Selve arbejds sektionen består af en række billeder for hvert af mine udvalgte projekter. Hertil er det muligt, at klikke sig ind på de forskellige billeder, hvortil en side vil komme frem med detaljer samt flere billeder af lige netop dette projekt. For ikke at nævne navigation funktionen, som er blevet tilføjet den nye version. Det er derfor nemmere, at sortere i projekterne og komme frem til lige netop det/de projekter, som har din interesse.
+                                    </p>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-6-sm col-6">
+					                <p class="justify color-grey">Nu, hvor jeg har din interesse, vil den næste sektion være en servicesektion. Dvs. en sektion hvortil, der ikke efterlades nogen tvivl om hvilke ting, som jeg kan tilbyde. Dette illustreres gennem 3 illustrerende ikoner samt en kort beskrivende tekst, hvor omfanget af den enkelte service forklares. I den næste sektion vil er der en beskrivelse af hvem jeg er som person - hvilken designer, som du har med at gøre. Her sættes både ord samt billede på, hvem jeg er. Efterfølgende er der en reference slider, hvor man kan se de forskellige referencer (fine ord), som jeg har fået med mig på vejen. Afslutningsvis er en kontaktformular, så det er nemt, at komme i kontakt med mig.
+                                    <br>
+                                    Det var et overordnet indblik i indholdet af sitet. Kort sagt om nogle sidens design elementer er, at den indeholder en burgermenu, som er placeret i øverste højre hjørne. For nemmere navigation, følger burgermenuen hele tiden siden ned, således at den altid vil være synlig. Derudover ses et logo i øverste venstre hjørne af siden, som ligesom ved burgermenuen, følger skærmen ned og er altid synlig. Logoet agerer også som hjem knap, hvortil man vil blive ført tilbage til toppen.
+					                </p>
+				                </div>
+				                <div class="col-6-sm col-6">
+				                    <img src="images/portfolio-mockup2.jpg" alt="Mockup" title="Portfolio mockup" class="portfolio-img" />
+				                </div>
+			                </div>
+							<div class="row">
+							    <div class="col-6-sm col-6">
+				                    <img src="images/portfolio-mockup3.jpg" alt="Mockup" title="Portfolio mockup" class="portfolio-img" />
+				                </div>
+								<div class="col-6-sm col-6">
+				                    <img src="images/portfolio-mockup4.jpg" alt="Mockup" title="Portfolio mockup" class="portfolio-img" />
+				                </div>
+							</div>
+		                </div>
+	                </section>
+					
+					<section class="container background-grey">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Brugertest</h2>
+				                </div>
+			                </div>
+							<div class="row">
+							    <div class="col-2-sm col-2"></div>
+								<div class="col-8-sm col-8">
+								    <p class="justify color-grey">Inden omdesignet af portfolio siden begyndte, blev der udført nogle brugertest af den gamle version.Testen gav både negative og positive resultater. Nogle af positive resultater var bl.a. sidens design, som brugeren fandt personlig og elegant med en tydelig og gennemarbejdet rød tråd. En side som skiller sig ud fra mængden af portfolios og som giver de nødvendige informationer om, personen bag og tidligere arbejde. Derudover var det en sjov og anderledes måde at benytte pilene i siden til at illustrere at det er en onepager, og at man skal rulle ned af for at se det resterende indhold. Dog var det ikke så nemt, at læse overskrifterne, som var en del af pilene i siden, i og med, at de skulle læses sidelæns. Derudover var siden nem at navigere rundt i, med burgermenuen i øverste højre hjørne af siden. 
+									<br>
+                                    Nogle af de negative resultater var bl.a., at logoet var klodset. I forlængelse af det var der forvirring om, hvorvidt logo teksten “Patricia Barrett” placeret i øverste venstre hjørne var en velkendt hjem knap eller blot tekst. Det skyldes særligt, at brugerne ikke forbandt det med et logo. Derudover fandt brugerne selvportrættet under baggrund for upassende i arbejdsmæssige sammenhænge, og kan medføre, at man skaber et negativt førstehåndsindtryk. I forbindelse med sidens opbygning var der et ønske om en anden opstilling, som ville give et bedre læse flow. Afslutningsvis var forsiden uinteressant og manglede blikfang.
+                                    </p>
+								</div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+						</div>
+					</section>
+	
+	                <section class="container background-blue">
+	                    <div class="grid-container">
+		                    <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Design og funktion</h2>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Lad os tage et kig på designet i den nye version. Der er sket en del ændringer i designet fra den første version til den nye. Overordnet set vil jeg sige, at siden er blevet simplificeret - at unødvendige og forstyrrende elementer er blevet fjernet for et mere lækkert udtryk og resultat.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/portfolio-wireframe.png" alt="Wireframe" title="Wireframe og flow" id="portfolio-wireframe" />
+				                </div>
+			                </div>
+							<div class="row">
+							    <div class="col-12-sm col-12">
+								    <h4 class="center color-white uppercase">"Lad mig fortælle dig en historie"</h4>
+								</div>
+							</div>
+							<div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Den første beslutning, som skulle tages, var hvorvidt det skulle være en såkaldt “onepager” eller den velkendte flersidet løsning. Eftersom et portfolio (som nævnt i det første afsnit) er et personligt site, hvor det handler om at vise hvem man er som designer, ens arbejde, ens læring mv., faldt valget på onepageren. Det blev det med henblik på, at skulle fortælle en historie gennem mit portfolio. En historie om, hvorfor jeg er den rigtige designer at vælge til projekter.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="images/aida-modellen.png" alt="Menu design" title="Menu design" id="aida-model" />
+				                </div>
+			                </div>
+							<div class="row">
+							    <div class="col-12-sm col-12">
+								    <h4 class="center color-white uppercase">AIDA-modellen</h4>
+								</div>
+							</div>
+			                <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Det leder videre til opsætningen af onepageren eller rækkefølgen af indholdet. Opsætningen tager afsæt i modellen, AIDA, som overordnet set står for Action, Interest, Desire og Action. Altså hvordan ønsket om at fortælle en historie gennem en onepager, hvor historieforløbet følger AIDA modellen. Hvis man går i dybden med de 4 punkter kan man se af mit portfolio, at attention ses gennem forsidebilledet (blikfang). Dernæst ses interest ved fremvisningen af tidligere arbejde samt services. Det fører til behovet (desire) efter at vide mere, som man får ved at høre noget om baggrunden og særligt referencerne, hvor det bekræftes, at man er den rette at hyre. Til sidst ses action gennem kontaktformularen.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/portfolio-sitemap.png" alt="Sitemap" title="Sitemap" id="portfolio-sitemap" />
+				                </div>
+			                </div>
+		                </div>
+	                </section>
+			
+	                <section class="container background-grey">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Læringsrefleksioner</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="justify color-grey">For at opsummere, har jeg i dette forløb arbejdet med tre projekter, som er 1) drøm dit portfolio (Første version af prototype), 2) byg dit portfolio (kodning af prototypen) samt 3) et redesign af mit portfolio, som både indeholder en prototype og en kodet version. Overordnet set har jeg lært, hvad det vil sige, at designe og udarbejde et personligt portfolio, som skal afspejle en selv som designer. Dertil er jeg blevet klogere på, hvad der kendetegner mig som designer. Hvad jeg særligt fandt interessant ved at arbejde med mit portfolio var, hvorledes valgene tages på baggrund af, at det skal udgøre en personlig fortælling samtidig med, at siden skal være informativ, illustrerende og nem at navigere rundt i. Inden projektets start, havde jeg ikke arbejdet med hverken hjemmeside design, -kodning eller -prototyper før. Derfor var jeg heller ikke bekendt med Adobes 2 programmer; XD og Dreamweaver. 
+                                    <br>
+                                    Som en del af min læringsproces gennem dette flow kan der ses, at der er foretaget store ændringer fra den første prototype til den nye version. Det skyldes hovedsageligt også den nye erfaring, som jeg erhvervede mig efter at have kodet den første prototype, som hovedsageligt var baseret ud fra et lækkert design. Uden skyggen af viden om, hvorledes de forskellige designelementer kunne realiseres, blev den nye version derfor lavet efter disse nyopnåede erfaringer. Hvad kan lade sig gøre? Og hvordan går designet ikke hen og påvirker det informative på siden? Disse to spørgsmål blev derfor hovedspørgsmålene som jeg løbende stillede mig selv i forbindelse med udarbejdelsen af den nye version.
+                                    <br>
+                                    Da man altid kan blive bedre og at der er uendelige muligheder for, at kunne udvikle sig, kunne jeg godt tænke mig, at arbejde yderligere med både prototype design af hjemmesider samt kodning af dem. Det vil jeg bl.a. gøre ved, at tage imod lignende cases for andre virksomheder.
+                                    </p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="file:///Users/peybarrett/Downloads/Portfolio_Prototype.pdf" target="_blank">Gamle rapport/prototype</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://xd.adobe.com/view/749d7cf6-a1ab-4ed2-7150-d348e8a80593-02ac/" target="_blank">Opdateret protoype</a>
+									</button>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+							<div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="http://patriciabarrett.dk/f%C3%B8rste-portfolio" target="_blank">Gamle rapport/website</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="file:///Users/peybarrett/Documents/GitHub/mul18b/portfolio-eksamen/gantt-kort%20Gantt-kort.pdf" target="_blank">Gantt-kort</a>
+									</button>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+		                </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	    <!-- Modal - eksamens portfolio - slut -->
+		
+	    <!-- Modal - vejrapp - start -->
+		<div id="openModal2" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				
+				<!-- Eksamen, flow 1 og flow 2 -->
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Vejr app</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Skoleprojekt</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Vejrapp er en prototype af en app, som med sit navn, giver dig hurtig og nem adgang til daglige og nyttige informationer omkring vejret på den lokation, hvor du befinder dig. App’en kan bruges globalt idet, at den er forbundet til informationer om dine lokaliteter. Den indeholder illustrerende og minimalistiske vejrikoner, som hurtigt tegner et billede af vejret. Derudover er app’ens informationer nøje udvalgt på baggrund af en kvantitativ test, som oplyste de mest efterspurgte informationer, som en vejrapp bør indeholde. Designet er udviklet således, at app’en er nem at navigere rundt i.</p>
+							    </div>
+				                <div class="col-2-sm col-2"></div>
+						    </div>
+			                <div class="row">
+			                    <div class="col-4-sm col-4"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://cphbusiness.mrooms.net/mod/assign/view.php?id=92929" target="_blank">Opgavebeskrivelse</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4"></div>
+			                </div>
+					    </div>
+				    </section>
+	
+	                <section class="container background-white">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black"> Nyeste version, dens funktioner og ændringer</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-6-sm col-6">
+				                    <img src="../images/vejrapp-mockup1.jpg" alt="Mockup" title="Vejrapp mockup" class="portfolio-img" />
+				                </div>
+				                <div class="col-6-sm col-6">
+					                <p class="justify color-grey">App’en rummer alle de nødvendige informationer for, at du hurtigt og nemt kan finde dine ønskede vejrinformationer. I app’en er det ikke kun muligt, at se vejret for ens nuværende lokalitet, men man kan inde under “find by” finde den ønskede by verden over. Det er en feature app’en bl.a. er givet for, at man kan være bedre klædt på til eksempelvis en rejse til udlandet. Ikke nok med det, kan man lave sin egen samling af sine favorit byer, så man nemt kan gå tilbage til disse og de vejret. Smart ikke?
+                                    <br>
+                                    Som det første man ser, når man åbner app’en, vil være vejret for ens nuværende lokalitet. På den måde slipper du for, at skulle ind under “find by” for derefter at kunne se vejret på din lokalitet. Det skyldes, at størstedelen af gangene du vil åbne app’en vil det være for at se vejret for din nuværende lokalitet, frem for en anden lokalitet end den, som du befinder dig på.
+                                    </p>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-6-sm col-6">
+					                <p class="justify color-grey">Illustrering af nat og dag ses gennem de smukke ikoners farver. Den orange og varme tone symbolisere, at vi befinder os i dagtimerne. Modsat symboliserer den blå og kolde farve, at det er i nattetimerne. 
+					                <br>
+					                I den nyeste prototype er der foretaget små perfektions ændringer. Det ses bl.a. i form af tekst transformering fra “uppercase” til “lowercase” på brødtekster. Det har resulteret i, at det nu er nemmere for brugeren at kunne læse disse. I forbindelse med designets brugervenlighed, er der fjernet en navigationsguide fra menuens “indstillinger”, da den ikke var nødvendig. Afslutningsvis var der i den første version lavet en fejl i app’ens informationer om vindstyrken. Her var der givet urealistiske tal samt måling for dette.
+					                </p>
+				                </div>
+				                <div class="col-6-sm col-6">
+				                    <img src="../images/vejrapp-mockup.jpg" alt="Mockup" title="Vejrapp mockup" class="portfolio-img" />
+				                </div>
+			                </div>
+		                </div>
+	                </section>
+	
+	                <section class="container background-blue">
+	                    <div class="grid-container">
+		                    <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Design og funktion</h2>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Selve designet er udarbejdet med udtrykket “Don’t make me think” i baghovedet. Altså var målet at skabe et så brugervenligt design som muligt. Løsningen endte ud i et design, som udelukkende rummer de mest nødvendige ting, som en app bør indeholde samt det, som lige netop denne app skulle indeholde. Altså en app med følgende indhold; navigation (by samling og -søgning), indstillinger og hjælp. </p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/vejrapp-wireframe_flow.png" alt="Wireframe" title="Wireframe og flow" id="app-wireframe" />
+				                </div>
+			                </div>
+							<div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">App’ens design rummer genkendelige elementer i form af burgermenuen i øverste venstre hjørne, som giver adgang til en sidemenu. For nemmere navigation på app’en, er burgermenuen placeret samme sted på alle sider. Derudover er der på by siderne et velkendt “tilføj” kryds, som signalerer, at man ved at trykke der, tilføjer siden til noget andet.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/vejrapp-sitemap.png" alt="Menu design" title="Menu design" id="app-sitemap" />
+				                </div>
+			                </div>
+		                </div>
+	                </section>
+			
+	                <section class="container background-grey">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Læringsrefleksioner</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="justify color-grey">I dette projekt blev jeg atter stillet over for arbejdet med prototyper - denne gang dog til apps. På den måde fik jeg både kastet mig ud i noget velkendt (prototype), men blev også stillet overfor en ny udfordring (app designet). Da et app design skal laves til en mobilversion, måtte jeg arbejde med en prototype passende mobile enheder. På den måde oplevede jeg hvorledes, at elementer, som passer på en computerenhed ikke nødvendigvis hænger sammen på en mobil enhed. Dette kan både være tekst, som bliver for småt eller billeder, som er for store. Hvad kan ses og hvad kan ikke ses på en mobil enhed?
+                                    <br>
+                                    En anden ting, som jeg stiftede bekendtskab med for første gang var begrebet “Don’t make me think”, som blev grundlaget for alle designvalg samt indholdet, som blev taget. Hvordan kunne jeg skabe en så simpel app, at alle ville kunne forstå den uden nogen misforståelser? Resultatet blev et simpelt design, hvor indholdet var nøje udvalgt efter app’ens ønskede funktion. Jeg lærte også at udarbejde en passende ikon serie. Jeg havde på forhånd arbejdet med ikoner før og hvorledes de skal passe ind i sammenhængen og målgruppen.
+                                    <br>
+                                    Da jeg stadig har meget at lære inden for app design, kunne jeg godt tænke mig, at tage imod flere cases, hvor jeg enten skal designe en helt ny app eller hvor, der blot skal laves et redesign eller nogle små design justeringer. 
+                                    </p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="file:///Users/peybarrett/Downloads/dokument.pdf" target="_blank">Gamle rapport/prototype</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://xd.adobe.com/view/a9602c5d-b942-4d1d-5f38-80c37ef2a565-df51/" target="_blank">Opdateret prototype</a>
+									</button>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+		                </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <!-- Modal - vejrapp - slut -->
+		
+		<!-- Modal - Sweetbot - start -->
+		<div id="openModal3" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				
+				<!-- Eksamen, flow 1 og flow 2 -->
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Sweetbot - Responsivt webdesign</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Skoleprojekt</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Sweetbot er en fiktiv konsulentvirksomhed, som tilbyder følgende services: hjemmesidedesign, digital sikkerhed og branding. Virksomheden blev lavet i forbindelse med et skoleprojekt hvortil, at der skulle laves et responsivt webdesign samt et logo til under virksomheden “Hotbot”. På forhånd var der givet en designmanual, dvs. nogle design retninger, som skulle overholdes. Resultatet af projektet endte ud i et responsivt webdesign kodet fra bunden med et tilhørende “Kommer snart” side til Hotbot. Hovedsageligt var målet at kreere en platform, hvor de kunne fremvise deres services, tidligere projekter, teamet mm. - lidt ligesom en virksomheds portfolio og kontaktside.</p>
+							    </div>
+				                <div class="col-2-sm col-2"></div>
+						    </div>
+			                <div class="row">
+			                    <div class="col-4-sm col-4"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://cphbusiness.mrooms.net/mod/assign/view.php?id=92975" target="_blank">Opgavebeskrivelse</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4"></div>
+			                </div>
+					    </div>
+				    </section>
+	
+	                <section class="container background-white">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black"> Nyeste version, dens funktioner og ændringer</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-6-sm col-6">
+				                    <img src="images/sweetbot-computer-mockup.jpg" alt="Mockup" title="Sweetbot mockup" class="portfolio-img" />
+				                </div>
+				                <div class="col-6-sm col-6">
+					                <p class="justify color-grey">Hjemmesiden rummer alle nødvendige informationer om virksomheden. Den skulle både være informativ, men også indbydende og hjælpe virksomheden med skille sig ud fra mængden af andre konsulenter inden for samme fagområde. Dette er særligt illustreret gennem farverige sider, illustrerende billeder og interessante overskrifter. 
+									<br>
+                                    Der er efterfølgende udarbejdet en ny prototype af designet, som er optimeret fra det gamle design. I prototypen ses der, at der er foretaget små ændringer i layoutets overordnede design. Derimod ses ændringerne særligt i de små detaljer. Eksempelvis kan der ses indenunder “Om Sweetbot”, at der i stedet for udelukkende at have en beskrivende tekst, også er tilføjet et billede, som tilfører mere liv og interesse til siden.
+                                    </p>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-6-sm col-6">
+					                <p class="justify color-grey">På selve forsiden er der foretaget ændringer i både layoutet og det informative. Det skyldes, at der ved den første version blev skabt usikkerhed over budskabet, som hele tiden ændres på forsiden. Hertil er disse budskaber blevet omformuleret således, at de ikke længere lægger op til tvivl og har en klar og tydelig forbindelse til virksomheden og deres produkt. Derudover er teksten rykket længere op for, at øjet ikke bliver draget ned mod bunden af siden, som det første. 
+                                    <br>
+                                    Under “Services” sektionen er der ligeledes foretaget nogle ændringer i forbindelse med de illustrerende ikoner. For et mere lækkert layout er disse i den nye version blevet midterstillet i forhold til den beskrivende tekst, hvilket er mere behageligt for øjet. 
+                                    <br>
+                                    I menuen er ordet “Hotbot” skiftet ud med logoet for bedre at indikere, at det er en ekstern side, som brugeren vil blive navigeret over til. Det har samtidig den effekt, at brugeren kan tænke en ekstra gang over, om de ønsker at forlade Sweetbot siden og har fået de ønskede informationer.
+                                    <br>
+                                    Afslutningsvis er der lavet perfektion ændringer i footeren, så indholdet layout mæssigt står bedre i forhold til hinanden. Der er altså ikke foretaget nogle ændringer i footerens informationer fra den gamle version.
+					                </p>
+				                </div>
+				                <div class="col-6-sm col-6">
+				                    <img src="images/sweetbot-mobil-mockup.jpg" alt="Mockup" title="Sweetbot mockup" class="portfolio-img" />
+				                </div>
+			                </div>
+							<div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://xd.adobe.com/view/8d0cf6c5-ea26-4e6f-75a1-abed094cf054-fb3d/" target="_blank">Computer version</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="https://xd.adobe.com/view/6767a558-f5ff-499d-5d41-8749270f0fa6-1156/" target="_blank">Mobil version</a>
+									</button>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+		                </div>
+	                </section>
+	
+	                <section class="container background-blue">
+	                    <div class="grid-container">
+		                    <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Design og funktion</h2>
+				                </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Selve designet er udarbejdet så simpelt som muligt, hvor det er virksomhedens ikoniske farver, som er sætter rammen for hjemmesidens design. Samtidig er hjemmesidens layout nøje lavet ud fra, at siden skal være nem at navigere rundt på og at der ingen tvivlende elementer fremtræder - eksempelvis en menu funktion, som man ikke ved hvordan man bruger. Der er derfor taget stor højde for genkendelighed i form af en menu i højre side samt et logo (fungerer som “hjem” -knap) placeret i øverste venstre hjørne.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/sweetbot-wireframe.png" alt="Wireframe" title="Wireframe og flow" id="sweetbot-wireframe" />
+				                </div>
+			                </div>
+							<div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="color-white justify">Der blev gjort store overvejelser omkring, hvorvidt designet skulle være en onepager, hvor der skulle fortælles en historie, eller om det skulle være en flersidet med en menu i toppen. I sidste ende faldt beslutningen på den flersidet løsning grundet ønsket om et brugervenligt design. Det hang især sammen med topmenuen, som brugeren altid vil kunne vende tilbage til. Hvis man ser nærmere på menuen, så var der i den første version af hjemmesiden ikke underpunkter til menupunkterne “Services” og “Om Sweetbot”. Der er i den nyeste prototype tilført dropdowns til disse to punkter. Det skyldes, at der var mangel på viden om, hvad man helt præcist kunne forvente at finde under disse punkter. Afslutningsvis hang det heller ikke sammen med ønsket om et brugervenligt design.
+                                    <br>
+                                    Som tidligere nævnt var det farverne, som spillede den store rolle i hjemmesidens design. Til trods for opgavens store udvalg af muligheder, lægger designet sig i stor grad op af logoets stil og farver. Hertil blev der valgt, at hjemmesiden ville stå bedst med logoets primære farve - den mørkere blå tone. Dertil for en bedre kontrast, blev den anden farve en lysere grå, som også var en del af designmanualen.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <img src="icons/sweetbot-sitemap.png" alt="Menu design" title="Menu design" id="sweetbot-sitemap" />
+				                </div>
+			                </div>
+		                </div>
+	                </section>
+			
+	                <section class="container background-grey">
+	                    <div class="grid-container">
+			                <div class="row">
+			                    <div class="col-12-sm col-12">
+				                    <h2 class="center uppercase color-black">Læringsrefleksioner</h2>
+				                </div>
+			                </div>
+		                    <div class="row">
+			                    <div class="col-2-sm col-2"></div>
+				                <div class="col-8-sm col-8">
+				                    <p class="justify color-grey">Under Sweetbot projektet erhvervede jeg mig nye kompetencer inden for responsivt webdesign, hvilket jeg ikke havde arbejdet med før. Inden projektets start havde jeg arbejdet med flere cases for virksomheder, hvor jeg har udarbejdet kreativer ud fra en designmanual. Mine erfaringer indenfor dette område blev alligevel øget efter projektet. Projektet indeholdt samtidig læringselementer såsom logo design, kodning og ikke mindst javaScript/jQuery, som jeg ikke havde arbejdet med før. Derudover fik jeg øvet mine kodnings- samt logo design evner. Som en forlængelse af dette projekt kunne jeg godt tænke mig, at arbejde med flere cases, - både for at blive bedre til at designe samt kode responsive webdesigns, men også hvor der arbejdes med en eksisterende designmanual - for at kunne dygtiggøre mig yderligere indenfor disse områder. To andre muligheder for mere tillæring er gennem online-kurser og det velkendte ordsprog “learning by doing”.</p>
+				                </div>
+				                <div class="col-2-sm col-2"></div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-4-sm col-4"></div>
+				                <div class="col-4-sm col-4">
+				                    <button class="opgave-btn">
+										<a href="file:///Users/peybarrett/Downloads/MULB-08-sweetbot%20(1).pdf" target="_blank">Gamle rapport/prototype</a>
+									</button>
+				                </div>
+				                <div class="col-4-sm col-4"></div>
+			                </div>
+		                </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <!-- Modal - Sweetbot - slut -->
+		
+		<!-- Modal - Lifted - start -->
+		<div id="openModal4" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				
+				<!-- Eksamen, flow 1 og flow 2 -->
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Lifted - bannere</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Webdesign</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					    </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <!-- Modal - Lifted - slut -->
+					
+		<!-- Modal - TopDanmark - start -->
+		<div id="openModal5" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">TopDanmark - bannere</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Webdesign</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					        </div>
+	                    </section>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- Modal - TopDanmark - slut -->
+		
+		<!-- Modal - Rejsemesse - start -->
+		<div id="openModal6" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Rejsemesse, bellacenter - plakatserie</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Tryk og print</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					    </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <!-- Modal - rejsemesse - slut -->
+		
+	    <!-- Modal - Kønsneutralitet - kampagne - start -->
+		<div id="openModal7" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Kønsneutralitet - kampagne</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Tryk og print</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					    </div>
+	                </section>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <!-- Modal - kønsneutralitet - kampagne - slut -->
+		
+		<!-- Modal - Geometric Mag - start -->
+		<div id="openModal8" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Geometric - Magasinforside</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Tryk og print</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					        </div>
+	                    </section>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- Modal - Geometric Mag - slut -->
+		
+		<!-- Modal - PB - visuel identitet - start -->
+		<div id="openModal9" class="modalDialog">
+			<div>
+				<!--<a href="#close" title="Close" class="close"><div class="close-btn"></div></a>-->
+					
+			<section class="container background-grey">
+			<div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<a href="#close" title="Close">
+					        <span class="close" onClick="closeModal()"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</section>
+			
+			<!-- Modal content - start -->
+			<div class="modal-content">
+				<div class="mySlides">
+				    <section class="container background-grey">
+				        <div class="grid-container">
+					        <div class="row">
+						        <div class="col-12 col-12-sm">
+								    <h1 class="center color-black uppercase">Patricia Barrett - visuel identitet</h1>
+					                <br>
+	                                <h3 class="center color-blue uppercase">Branding</h3>
+				                </div>
+						    </div>
+						    <div class="row">
+				                <div class="col-2-sm col-2"></div>
+				                <div class="col-8 col-8-sm">
+					                <p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora adipisci ex exercitationem vitae eum voluptate, esse architecto eveniet quia inventore blanditiis praesentium minima, tenetur corrupti ipsa ab labore libero aperiam? Doloribus recusandae veritatis vero eveniet officiis. Quae voluptates illo fuga, veritatis, delectus quam, qui sapiente neque blanditiis atque unde id.</p>
+							    </div>
+								<div class="col-2-sm col-2"></div>
+							</div>
+					        </div>
+	                    </section>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- Modal - PB - visuel identitet - slut -->
+	
+	</section>
+		
+	<script>
+		
+		filterSelection("all")
+		function filterSelection(c) {
+		  var x, i;
+		  x = document.getElementsByClassName("column");
+		  if (c == "all") c = "";
+		  for (i = 0; i < x.length; i++) {
+			w3RemoveClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+		  }
+		}
+
+		function w3AddClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+		  }
+		}
+
+		function w3RemoveClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+			  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			}
+		  }
+		  element.className = arr1.join(" ");
+		}
+
+		// Add active class to the current button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function(){
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		  });
+		}
+	
+	</script>
+	
+	<!-- Service section - start -->
+	<section class="background-white" id="services">
+	    <div class="container">
+		    <div class="grid-container">
+			    <div class="row">
+				    <div class="col-12-sm col-12">
+					    <h2 class="center color-black uppercase">Services</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+					    <p class="center color-grey">I forbindelse med mine nuværende erfaringer tilbyder jeg 3 overordnede services, som kan ses nedenfor. Jeg er dog altid åben for nye udfordringer.</p>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				
+				<!-- Services container -->
+				<div class="row">
+				    <div class="col-4-sm col-4">
+					    <img src="icons/webdesign-icon.png" alt="service-icon" title="Webdesign ikon" class="service-icons" id="webdesign-icon" />
+						<br>
+						<h4 class="center color-black uppercase">Webdesign</h4>
+						<br>
+						<p class="justify color-grey">Digitalt design er fremtiden! <br>
+                        Jeg befinder mig på hele den digitale palette - lige fra displaybanners, responsivt webdesign til en god forståelse for og udarbejdelse af content til web.</p>
+					</div>
+					<div class="col-4-sm col-4">
+						<img src="icons/trykogprint-icon.png" alt="service-icon" title="Tryk og print ikon" class="service-icons" id="trykogprint-icon" />
+						<br>
+						<h4 class="center color-black uppercase">Tryk og print</h4>
+						<br>
+						<p class="justify color-grey">Trods den digitale æra, skal det trykte medie ikke smides i glemmebogen!<br>
+                        Idéer og opsætning af både tykke og tynde tryksager og opsigtsvækkende outdoor. Til trods for min kærlighed for pixels, har det trykte medie altså stadig en stor plads hos mig.</p>
+					</div>
+					<div class="col-4-sm col-4">
+					    <img src="icons/branding-icon.png" alt="service-icon" title="Branding ikon" class="service-icons" id="branding-icon" />
+						<br>
+						<h4 class="center color-black uppercase">Branding</h4>
+						<br>
+						<p class="justify color-grey">Let’s face it... Branding har aldrig været vigtigere!<br> 
+                        Lige fra visuelle identiteter til kreative branding løsninger, som styrker dit brand og position på markedet.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Service section - slut -->
+	
+	<!-- Baggrunds section - start -->
+	<section class="background-grey">
+	    <div class="container">
+		    <div class="grid-container">
+				<div class="row">
+				    <div class="col-12-sm col-12">
+					    <h2 class="center color-black uppercase">Her er jeg så</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6-sm col-6">
+					    <img src="images/selfportrait.png" alt="selv-portræt" title="Selvportræt" id="selfportrait"/>
+					</div>
+					<div class="col-6-sm col-6">
+					    <h3 class="left color-grey" id="baggrund-h3">Håndværker med idé og design som speciale</h3>
+						<br>
+						<p class="justify color-grey">Engageret, positiv og dygtig grafisk og digital designer, der er selvstændig, effektiv og meget produktiv. Jeg er nem at arbejde sammen med og er udpræget teamplayer, der gerne giver modspil for det fælles bedste resultat. I dagligdagen har jeg primært fokus på grafik, detaljen og det visuelle, - uanset om vi snakker off- eller online markedsføring. Jeg har gode sociale og kommunikative egenskaber – og stræber efter at søge nye udfordringer og hele tiden være åben for udvikling.
+                        <br>
+                        Samtidig er jeg god til at holde overblikket og påtage mig ansvar: Jeg tager stor del i det mere strategiske arbejde omkring branding/visuel identitet, budskaber, web og content strategi samt kampagne-/medieplanlægning - uanset om det er i form af sparring, eller hvor jeg selv står som tovholder.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Baggrunds section - slut -->
+	
+	<!-- Reference section - start -->
+	<section class="background-white">
+	    <div class="container">
+		    <div class="grid-container">
+			    <div class="row">
+				    <div class="col-12-sm col-12">
+					    <h2 class="center color-black uppercase">Referencer</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+					    <p class="center color-grey">Jeg har fået et par ord med på vejen af lærere, medstuderende og nogle af dem, som jeg har arbejdet sammen med gennem tiden.</p>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				
+				<!-- Referencerne -->
+				<div class="row slideshow-container">
+				    <div class="col-2-sm col-2">
+					    <a class="prev" onClick="plusSlides(-1)"><div class="prev-arrow"></div></a>
+					</div>
+					<div class="col-8-sm col-8 myReferences fade">
+					    <h4 class="center color-blue uppercase">Webdesign / Prototype</h4>
+						<br>
+						<p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolorem eum obcaecati laudantium totam, ipsam blanditiis iste aliquid voluptate rem dolorum impedit, quam quos culpa cum eos quo velit repellendus repellat sequi sit animi tenetur adipisci. Labore eius natus distinctio quae quidem magni vero soluta fugiat, mollitia consequatur, voluptatem sit?<br>
+						<em>-For- + efternavn, stilling</em></p>
+					</div>
+					
+					<div class="col-8-sm col-8 myReferences fade">
+					    <h4 class="center color-blue uppercase">Tryk og print / Plakatserie</h4>
+						<br>
+						<p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolorem eum obcaecati laudantium totam, ipsam blanditiis iste aliquid voluptate rem dolorum impedit, quam quos culpa cum eos quo velit repellendus repellat sequi sit animi tenetur adipisci. Labore eius natus distinctio quae quidem magni vero soluta fugiat, mollitia consequatur, voluptatem sit?<br>
+						<em>-For- + efternavn, stilling</em></p>
+					</div>
+					
+					<div class="col-8-sm col-8 myReferences fade">
+					    <h4 class="center color-blue uppercase">Branding / Visuel identitet</h4>
+						<br>
+						<p class="justify color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolorem eum obcaecati laudantium totam, ipsam blanditiis iste aliquid voluptate rem dolorum impedit, quam quos culpa cum eos quo velit repellendus repellat sequi sit animi tenetur adipisci. Labore eius natus distinctio quae quidem magni vero soluta fugiat, mollitia consequatur, voluptatem sit?<br>
+						<em>-For- + efternavn, stilling</em></p>
+					</div>
+					<div class="col-2-sm col-2">
+					    <a class="next" onClick="plusSlides(1)"><div class="next-arrow"></div></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12-sm col-12">
+						<div class="center">
+					    <span class="dot" onClick="currentSlide(1)"></span>
+						<span class="dot" onClick="currentSlide(2)"></span>
+						<span class="dot" onClick="currentSlide(3)"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Reference section - slut -->
+	
+	<!-- Reference script - start -->
+	<script type="text/javascript"> 
+		/*JavaScript - reference slider/nav*/
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		
+		// Next/previous controls
+        function plusSlides(n) {
+			showSlides(slideIndex += n);
+        }
+		
+		// Thumbnail image controls
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("myReferences");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none"; 
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";
+            }
+	</script>
+	<!-- Reference script - slut -->
+	
+	<!-- Kontakt section - start -->
+	<section class="background-grey" id="kontakt">
+	    <div class="container">
+		    <div class="grid-container">
+			    <div class="row">
+				    <div class="col-12-sm col-12">
+					    <h2 class="center color-black uppercase">Kontakt</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12-sm col-12">
+						<div class="understreg center"></div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+						<p class="center color-grey">Nok om mig! Skal vi komme i gang med at kreere noget nyt og spændende?</p>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				
+				<form action="mailto:pb@patriciabarrett.dk" method="post" enctype="text/plain">
+				<!-- Kontakt formular -->
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-4-sm col-4">
+					    <input type="text" id="name" name="name" placeholder="Navn *" required>
+					</div>
+					<div class="col-4-sm col-4">
+					    <input type="email" id="mail" name="mail" placeholder="E-mail *" required>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-4-sm col-4">
+					    <input type="number" id="phone" name="phone" placeholder="Tlf. nr.">
+					</div>
+					<div class="col-4-sm col-4">
+					    <input type="text" id="subject" name="subject" placeholder="Emne *" required>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				<div class="row">
+				    <div class="col-2-sm col-2"></div>
+					<div class="col-8-sm col-8">
+					    <textarea id="meddelelse" name="meddelelse" placeholder="Meddelelse *" style="height:200px" required></textarea>
+					</div>
+					<div class="col-2-sm col-2"></div>
+				</div>
+				<div class="row">
+				    <div class="col-4-sm col-4"></div>
+					<div class="col-4-sm col-4">
+					    <input type="submit" value="Send meddelelse">
+					</div>
+					<div class="col-4-sm col-4"></div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Kontakt section - slut -->
+	
+	<!-- Footer - start -->
+	<footer class="background-white">
+		<div class="grid-container">
+		    <div class="row">
+				<div class="col-12-sm col-12">
+					<p class="center color-grey footer-txt"><strong>Vil du se mere? Så hop ind på følgende:</strong></p>
+					<a href="https://github.com/patriciadamgaardbarrett" target="_blank">
+					    <img src="icons/github-icon.png" alt="GitHub ikon" title="GitHub ikon" class="some-icon" id="leftSoMeIcon" />
+					</a>
+					<a href="https://www.linkedin.com/in/patricia-barrett-148246117/" target="_blank">
+					    <img src="icons/linkedin-icon.png" alt="LinkedIn ikon" title="LinkedIn ikon" class="some-icon" />
+					</a>
+					<a href="https://dribbble.com/patriciabarrett" target="_blank">
+					    <img src="icons/dribbble-icon.png" alt="Dribbble ikon" title="Dribbble ikon" class="some-icon" />
+					</a>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="col-12-sm col-12">
+				    <p class="center color-grey footer-txt"><strong>Adresse oplysninger:</strong></p>
+					<p class="center color-grey footer-txt">M. Luther Kings Vej 11, 6, 3 <br>2450 København SV <br>Danmark (DK)<br>Tlf. nr.: (+45) 60 69 54 77<br> E-mail: pb@patriciabarrett.dk</p>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="col-12-sm col-12">
+				    <p class="center color-grey" id="footer-txt">&copy; Copyrights 2018, all rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer - slut -->
+	
+	<script type="text/javascript"> /* JavaScript - burgermenuen */
+		function myFunctionMenu(){
+			var x = document.getElementById("myLinks");
+			if (x.style.display === "block"){
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+	</script>
+	
 </body>
 </html>

@@ -1,0 +1,775 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Times", Times New Roman, serif;
+}
+
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	/*transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	-webkit-transform: skewY(4deg);*/
+}
+
+.header-container {
+	width: 95%;
+	margin: 0 auto;
+}
+
+
+/* ---------------------------------------------- Section -------------------------------------------- */
+section {
+	margin-top: 0%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	/*position: absolute;
+	transform: skewY(-4deg);
+	-ms-transform: skewY(-4deg);
+	-webkit-transform: skewY(-4deg);*/
+}
+
+/*#headerSection {
+	margin-top: 0%;
+	position: relative;
+	background: #f3f3f3;
+	width: 100%;
+	height: 200px;
+}
+
+#headerSection::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #f3f3f3;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform-origin: top right;
+	transform: skewY(-4deg);
+	-ms-transform: skewY(-4deg);
+	-webkit-transform: skewY(-4deg);
+}*/
+
+/* Sections farver */
+.background-white {
+	background: white;
+	position: relative;
+}
+
+.background-grey {
+	background: #f3f3f3;
+	position: relative;
+}
+
+.background-darkgrey {
+	background: #9b9ba3;
+}
+
+.background-blue {
+	background: #87c5bd;
+}
+
+.understreg {
+	background: #87c5bd;
+	height: 3px;
+	width: 6em;
+	border-radius: 3px;
+	margin-bottom: 25px;
+}
+
+
+
+/* ---------------------------------------------- Tekst -------------------------------------------- */
+/* Tekst størrelser */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+  padding-top: 20px;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: 5px;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+
+
+/* Tekst styling */
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/* Tekst farve */
+.color-black {
+	color: black;
+}
+
+.color-grey {
+	color: #9b9ba3;
+}
+
+.color-blue {
+	color: #87c5bd;
+}
+
+.color-white {
+	color: white;
+}
+
+/* Tekst positionering */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+
+
+
+/* ---------------------------------------------- Grid -------------------------------------------- */
+
+/* Container */
+.grid-container {
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.grid-container.header {
+	z-index:10;
+}
+
+/* Række */
+.row {
+    position: relative;
+    width: 100%;
+}
+
+.row [class^="col"] {
+    float: left;
+    margin: 0.5rem 2%;
+    min-height: 0.125rem;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* Kolonner */
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    width: 96%;
+}
+
+.col-1-sm {
+    width: 4.33%;
+}
+
+.col-2-sm {
+    width: 12.66%;
+}
+
+.col-3-sm {
+    width: 21%;
+}
+
+.col-4-sm {
+    width: 29.33%;
+}
+
+.col-5-sm {
+    width: 37.66%;
+}
+
+.col-6-sm {
+    width: 46%;
+}
+
+.col-7-sm {
+    width: 54.33%;
+}
+
+.col-8-sm {
+    width: 62.66%;
+}
+
+.col-9-sm {
+    width: 71%;
+}
+
+.col-10-sm {
+    width: 79.33%;
+}
+
+.col-11-sm {
+    width: 87.66%;
+}
+
+.col-12-sm {
+    width: 96%;
+}
+
+
+
+/* ---------------------------------------------- Forside + Menu -------------------------------------------- */
+
+header {
+	background: none;
+	color: black;
+	padding: 1em 0;
+	position: fixed;
+	z-index:9;
+	width: 100%;
+}
+
+header::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+
+.left {
+	float: left;
+	margin-left: 20px;
+}
+
+#logo {
+	width: 40px;
+	height: auto;
+	cursor: pointer;
+}
+
+#myLinks {
+	position: absolute;
+	background: #f3f3f3;
+	right: 0%;
+	top: 100%;
+	overflow: hidden; 
+	/*clip-path: circle(0px at top right);*/
+    transition: clip-path ease-in-out 700ms;
+    display: none;
+	z-index: 9999;
+}
+
+#myLinks--open {
+	height: auto;
+	/*clip-path: circle(250% at top right);*/
+    display: block;
+}
+
+#myLinks ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#myLinks li {
+	border-bottom: 1px solid #9b9ba3;
+}
+
+#myLinks a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 2em 16em;
+	text-transform: uppercase;
+}
+
+#myLinks a:hover, #myLinks a:focus {
+	background: #f3f3f3;
+	color: #87c5bd;
+}
+
+#myLinks li:last-child {
+	border-bottom: none;
+}
+
+.menu-toggle {
+	padding: 1em;
+	position: absolute;
+	right: 8px;
+	cursor: pointer;
+	margin-top: 12px;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+	background: black;
+	height: 3px;
+	width: 1.75em;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+	transform: translateY(-6px);
+}
+
+.hamburger::after {
+	transform: translateY(3px);
+}
+
+.open .hamburger {
+	transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+	opacity: 0;
+}
+
+.open .hamburger::after {
+	transform: translateY(-3px) rotate(-90deg);
+}
+
+
+
+.down-arrow {
+	border-radius: 3px;
+	border: solid #9b9ba3;
+	border-width: 0 0.20em 0.20em 0;
+	display: inline-block;
+	padding: 8px;
+	transform: rotate(45deg);
+	 
+}
+
+.down-arrow:hover {
+	border: solid #87c5bd;
+	border-width: 0 0.20em 0.20em 0;
+	display: inline-block;
+	padding: 8px;
+}
+
+.down-arrow:focus {
+	transition: all ease-in-out 500ms;
+}
+
+
+/* Forside billede */
+.forside-img {
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#headerSection {
+	margin-top: 0%;
+	position: relative;
+	background: #f3f3f3;
+	width: 100%;
+	height: 505px;
+	margin-bottom: 0%;
+	z-index: -1;
+}
+
+#rulNed {
+	position: absolute;
+	/*z-index: 1;*/
+    padding-left: 50%;
+	top: 500px;
+	cursor: pointer;
+}
+
+#rulNed:hover {
+	border: solid #87c5bd;
+	border-width: 0 0.20em 0.20em 0;
+	display: inline-block;
+	padding: 8px;
+}
+
+
+/* ---------------------------------------------- Portfolio ----------------------------------------------- */
+.remove_a_style {
+	text-decoration: none;
+	background-color:none !important;
+} 
+
+.column {
+  display: none;
+}
+
+.portfolio-img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.show {
+	display: block;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	cursor: pointer;
+	background: #f3f3f3;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: 2.5px;
+}
+
+.btn:hover {
+	color: #87c5bd;
+}
+
+.btn.active {
+	color: white;
+}
+
+
+#portfolio-wireframe  {
+	width: 60%;
+	padding: 50px 0;
+}
+
+#app-wireframe, #sweetbot-wireframe {
+	width: 60%;
+	padding: 50px 20%;
+}
+
+#app-sitemap, #sweetbot-sitemap, #portfolio-sitemap {
+	width: 60%;
+	padding: 50px 20%;
+}
+
+#aida-model {
+	width: 60%;
+	padding: 50px 20%;
+}
+
+#portfolio-wireframe {
+	width: 100%;
+}
+
+.opgave-btn {
+	width: 100%;
+	background: #87c5bd;
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: 2.5px;
+}
+
+.opgave-btn:hover {
+	background: #9b9ba3;
+}
+
+
+/* Modals */
+.modalDialog {
+    position: fixed;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+    pointer-events: auto;
+    overflow: auto;
+}
+
+.modalDialog > div {
+    width: 100%;
+    position: relative;
+    margin: 10% auto;
+    border-radius: 10px;
+    background: #fff;
+	top: 0;
+}
+
+.modal-content {
+	width: 100%;
+	height: auto;
+}
+
+.close, .close::after, .close::before {
+	background: black;
+    height: 3px;
+    /*position: fixed;*/
+	width: 1.75em;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	z-index: 999999;
+    /*right: 25px;
+    text-align: center;
+    top: 10px;*/
+    /*text-decoration: none;
+    font-weight: bold;
+    font-size:20px;*/
+}
+
+.close::before {
+	transform: translateY(-6px);
+	opacity: 0;
+}
+
+.close {
+	transform: rotate(45deg);
+}
+
+.close::after {
+	transform: translateY(-3px) rotate(-90deg);
+}
+
+
+.close:hover, .close:focus {
+	cursor: pointer;
+}
+
+.modal_img {
+  width:20%;
+}
+
+button a {
+	text-decoration: none;
+	color: white;
+}
+
+
+/* ---------------------------------------------- Service ------------------------------------------------- */
+.service-icons {
+	width: auto;
+	height: 140px;
+}
+
+#webdesign-icon {
+	padding: 10% 22%;
+}
+
+#trykogprint-icon {
+	padding: 10% 36%;
+}
+
+#branding-icon {
+	padding: 10% 30%;
+}
+
+
+/* ---------------------------------------------- Baggrund ------------------------------------------------ */
+#selfportrait {
+	width: 80%;
+	height: auto;
+}
+
+#baggrund-h3 {
+	padding-top: 68px;
+}
+
+
+/* ---------------------------------------------- Referencer ---------------------------------------------- */
+.prev, .next, .down {
+	cursor: pointer;
+}
+
+.prev-arrow, .next-arrow {
+	/*background: black;*/
+	border-radius: 3px;
+	border: solid #9b9ba3;
+	border-width: 0 0.25em 0.25em 0;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 70%;
+}
+
+.prev-arrow {
+	transform: rotate(135deg);
+}
+
+.next-arrow {
+	transform: rotate(-45deg);
+	float: right;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+	border: solid #87c5bd;
+	border-width: 0 0.25em 0.25em 0;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	border-radius: 50%;
+	background: #9b9ba3;
+	display: inline-block;
+	transition: background 0.6s ease;
+}
+
+.active, .dot:hover {
+	background: #87c5bd;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+
+/* ---------------------------------------------- Kontakt sektion ----------------------------------------- */
+
+input[type=text], input[type=email], input[type=number], textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #9b9ba3;
+	border-radius: 4px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: 2.5px;
+}
+
+input[type=submit] {
+	width: 100%;
+	background: #87c5bd;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: 2.5px;
+}
+
+input[type=submit]:hover {
+	background: #9b9ba3;
+}
+
+
+/* ---------------------------------------------- Footer sektion ----------------------------------------- */
+
+footer {
+	z-index: -1;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+.footer-txt {
+	font-size: 1rem;
+}
+
+#footer-txt {
+	font-size: 0.715rem;
+}
+
+.some-icon {
+	width: 40px;
+	height: auto;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#leftSoMeIcon {
+	margin-left: 42.5%;
+}
+
+
+
+
+
+
