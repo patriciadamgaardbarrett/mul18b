@@ -289,7 +289,7 @@ p {
 /* ---------------------------------------------- Forside + Menu -------------------------------------------- */
 
 header {
-	background: none;
+	background: #f3f3f3;
 	color: black;
 	padding: 1em 0;
 	position: fixed;
@@ -428,6 +428,7 @@ header::after {
 	height: auto;
 	margin-top: 0;
 	margin-bottom: 0;
+	z-index: -5;
 }
 
 #headerSection {
@@ -645,6 +646,7 @@ button a {
 
 #baggrund-h3 {
 	padding-top: 68px;
+	padding-bottom: 15px;
 }
 
 
@@ -770,6 +772,5 @@ footer a {
 
 
 
-
-
+/* ---------------------------------------------- Responsivt design ----------------------------------------- */
 

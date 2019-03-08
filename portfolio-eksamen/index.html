@@ -1,15 +1,24 @@
 <!doctype html>
 <html lang="da">
 <head>
-<meta charset="UTF-8">
-<title>Portfolio • Patricia Barrett</title>
+    <meta charset="UTF-8">
+    <title>Portfolio • Patricia Barrett</title>
 	<link rel="stylesheet" href="stylesheet.css" />
 	<link rel="shortcut icon" type="image/png" href="icons/shortcut-logo.png" sizes="57x57">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135449573-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-135449573-1');
+    </script>
 </head>	
 
 <body>
 	
-	<header id="hjem">
+	<header>
 		<div class="topnav">
 		    <div class="left">
 			    <a href="#hjem">
@@ -35,20 +44,12 @@
 		</div>
 	</header>
 	
-	<section class="background-grey" id="headerSection">
+	<section class="background-grey headerSection" id="hjem">
 	    <div class="container">
 		    <div class="grid-container header">
-				<div class="row forside-slider">
-					<div class="col-12-sm col-12 myForsideImg fade">
-					    <img src="icons/forside-img1.png" alt="forside billede" class="forside-img" />
-					</div>
-					
-					<div class="col-12-sm col-12 myForsideImg fade">
-					    <img src="icons/forside-img2.png" alt="forside billede" class="forside-img" />
-					</div>
-					
-					<div class="col-12-sm col-12 myForsideImg fade">
-					    <img src="icons/forside-img3.png" alt="forside billede" class="forside-img" />
+				<div class="row">
+					<div class="col-12-sm col-12">
+					    <img src="images/forside-gif.gif" alt="forside gif" class="forside-img" />
 					</div>		
 				</div>
 				    <div id="rulNed">
@@ -60,31 +61,15 @@
 			</div>
 	</section>
 	
-	<script type="text/javascript">
-		var slideIndex = 0;
-		showSlides();
-		
-		function showSlides() {
-			var i;
-            var slides = document.getElementsByClassName("myForsideImg");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none"; 
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1} 
-            slides[slideIndex-1].style.display = "block"; 
-            setTimeout(showSlides, 4000); // Change image every 2 seconds
-		}
-	</script>
-
 	
 	<!-- Introduktion section - start -->
-	<section class="background-white">
+	<section class="background-white" id="introduktion">
 		<div class="container">
 			<div class="grid-container">
 				<div class="row">
 					<div class="col-12-sm col-12">
-						<h2 class="center color-black uppercase" id="introduktion">Lad mig bryde isen</h2>
+						<h2 class="center color-black uppercase" id="introduktion-txt">Lad mig bryde isen</h2>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 					</div>
 				</div>
 				<div class="row">
@@ -106,7 +91,7 @@
 	<!-- Introduktion section - slut -->
 	
 	<!-- Portfolio section - start -->
-    <section class="background-grey">
+    <section class="background-grey" id="portfolio">
 		<div class="container">
 			<div class="grid-container">
 				<div class="row">
@@ -1127,7 +1112,7 @@
 	<!-- Service section - slut -->
 	
 	<!-- Baggrunds section - start -->
-	<section class="background-grey">
+	<section class="background-grey" id="baggrund">
 	    <div class="container">
 		    <div class="grid-container">
 				<div class="row">
@@ -1145,7 +1130,7 @@
 					    <img src="images/selfportrait.png" alt="selv-portræt" title="Selvportræt" id="selfportrait"/>
 					</div>
 					<div class="col-6-sm col-6">
-					    <h3 class="left color-grey" id="baggrund-h3">Håndværker med idé og design som speciale</h3>
+					    <h3 class="center color-grey" id="baggrund-h3">Håndværker med idé og design som speciale</h3>
 						<br>
 						<p class="justify color-grey">Engageret, positiv og dygtig grafisk og digital designer, der er selvstændig, effektiv og meget produktiv. Jeg er nem at arbejde sammen med og er udpræget teamplayer, der gerne giver modspil for det fælles bedste resultat. I dagligdagen har jeg primært fokus på grafik, detaljen og det visuelle, - uanset om vi snakker off- eller online markedsføring. Jeg har gode sociale og kommunikative egenskaber – og stræber efter at søge nye udfordringer og hele tiden være åben for udvikling.
                         <br>
@@ -1158,7 +1143,7 @@
 	<!-- Baggrunds section - slut -->
 	
 	<!-- Reference section - start -->
-	<section class="background-white">
+	<section class="background-white" id="referencer">
 	    <div class="container">
 		    <div class="grid-container">
 			    <div class="row">
